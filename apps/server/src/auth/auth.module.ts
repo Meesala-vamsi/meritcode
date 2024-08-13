@@ -16,13 +16,14 @@ import { JwtStrategy } from "./strategy/jwt.strategy";
 import { LocalStrategy } from "./strategy/local.strategy";
 import { RefreshStrategy } from "./strategy/refresh.strategy";
 import { TwoFactorStrategy } from "./strategy/two-factor.strategy";
+import { HttpModule } from "@nestjs/axios";
 
 @Module({})
 export class AuthModule {
   static register(): DynamicModule {
     return {
       module: AuthModule,
-      imports: [PassportModule, JwtModule, UserModule, MailModule],
+      imports: [PassportModule, JwtModule, UserModule, MailModule,HttpModule],
       controllers: [AuthController],
       providers: [
         AuthService,

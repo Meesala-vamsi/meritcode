@@ -7,6 +7,7 @@ export const loginSchema = z
   .object({
     identifier: z.string(),
     password: z.password().min(6),
+    recaptchaToken: z.string().min(1, { message: "Please complete the reCAPTCHA." })
   })
   .refine(
     (value) => {

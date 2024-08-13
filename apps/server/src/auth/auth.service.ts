@@ -19,6 +19,8 @@ import { MailService } from "../mail/mail.service";
 import { UserService } from "../user/user.service";
 import { UtilsService } from "../utils/utils.service";
 import { Payload } from "./utils/payload";
+import { HttpService } from "@nestjs/axios";
+import { firstValueFrom } from "rxjs";
 
 @Injectable()
 export class AuthService {
@@ -28,6 +30,7 @@ export class AuthService {
     private readonly mailService: MailService,
     private readonly jwtService: JwtService,
     private readonly utils: UtilsService,
+    private readonly httpService: HttpService,
   ) {}
 
   private hash(password: string): Promise<string> {
@@ -121,8 +124,24 @@ export class AuthService {
     }
   }
 
-  async authenticate({ identifier, password }: LoginDto) {
+  async verifyRecaptchaToken(recaptchaToken:string){
+    const secretkey="6LdepR8qAAAAADDItpsd9yXNV9fnm6RDmsps7euS"
+    const verificationUrl=`https://www.google.com/recaptcha/api/siteverify?secret=${secretkey}&response=${recaptchaToken}`
+
+    try{
+      const {data} = await firstValueFrom(this.httpService.post(verificationUrl))
+      if(!data.success){
+        throw new BadRequestException("Invalid reCAPTCHA token");
+      }
+
+    }catch(error){
+      throw new InternalServerErrorException("Failed to verify reCAPTCHA token")
+    }
+  }
+
+  async authenticate({ identifier, password, recaptchaToken }: LoginDto) {
     try {
+      await this.verifyRecaptchaToken(recaptchaToken)
       const user = await this.userService.findOneByIdentifier(identifier);
 
       if (!user) {

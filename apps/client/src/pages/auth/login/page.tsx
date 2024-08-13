@@ -15,7 +15,7 @@ import {
   Input,
 } from "@reactive-resume/ui";
 import { cn } from "@reactive-resume/utils";
-import { useRef } from "react";
+import { useRef} from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
@@ -23,6 +23,7 @@ import { z } from "zod";
 
 import { useLogin } from "@/client/services/auth";
 import { useAuthProviders } from "@/client/services/auth/providers";
+import Recaptcha from "../_components/recaptcha";
 
 type FormValues = z.infer<typeof loginSchema>;
 
@@ -37,7 +38,7 @@ export const LoginPage = () => {
 
   const form = useForm<FormValues>({
     resolver: zodResolver(loginSchema),
-    defaultValues: { identifier: "", password: "" },
+    defaultValues: { identifier: "", password: "", recaptchaToken:"" },
   });
 
   const onSubmit = async (data: FormValues) => {
@@ -46,6 +47,10 @@ export const LoginPage = () => {
     } catch (error) {
       form.reset();
     }
+  };
+
+  const handleToken = (token: string) => {
+    form.setValue("recaptchaToken", token)
   };
 
   return (
@@ -106,6 +111,17 @@ export const LoginPage = () => {
                       temporarily.
                     </Trans>
                   </FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              name="recaptchaToken"
+              control={form.control}
+              render={() => (
+                <FormItem>
+                  <Recaptcha callback={handleToken} />
                   <FormMessage />
                 </FormItem>
               )}

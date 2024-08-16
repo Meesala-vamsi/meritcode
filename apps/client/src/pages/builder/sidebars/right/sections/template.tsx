@@ -10,7 +10,7 @@ import { getSectionIcon } from "../shared/section-icon";
 export const TemplateSection = () => {
   const setValue = useResumeStore((state) => state.setValue);
   const currentTemplate = useResumeStore((state) => state.resume.data.metadata.template);
-
+  const defaultColor = "#475569";
   return (
     <section id="template" className="grid gap-y-6">
       <header className="flex items-center justify-between">
@@ -30,7 +30,7 @@ export const TemplateSection = () => {
               onClick={() => {
                 setValue('metadata.template', template);
                 setValue('metadata.layout', layoutsList[template]); 
-                setValue('metadata.theme.primary', colorList[template])
+                setValue('metadata.theme.primary',  colorList[template as keyof typeof colorList] || defaultColor)
               }}   
               className={cn(
                 "relative cursor-pointer rounded-sm ring-primary transition-all hover:ring-2",

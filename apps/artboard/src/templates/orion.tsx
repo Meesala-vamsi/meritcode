@@ -227,15 +227,14 @@ const Experience = () => {
   return (
     <Section<Experience> section={section} urlKey="url" summaryKey="summary">
     {(item) => (
-      <div className="flex items-center justify-between">
-        <div className="text-left">
-          <div className="font-bold">{item.company}</div>
-          <div>{item.position}</div>
+      <div className="grid grid-cols-6 items-center justify-between">
+        <div className="shrink-0 text-right italic text-grey">
+          <div className="font-bold">{item.date}</div>
           <div>{item.location}</div>
         </div>
-
-        <div className="shrink-0 text-right">
-          <div className="font-bold">{item.date}</div>
+        <div className="text-left col-span-4">
+          <div className="font-bold">{item.company}</div>
+          <div>{item.position}</div>
         </div>
       </div>
     )}
@@ -326,8 +325,8 @@ const Skills = () => {
       <ul className="mt-2 grid grid-cols-4 gap-x-6 list-inside">
         {section.items.map((item) => (
           <div className="flex">
-            <div className="mr-2 text-3xl text-black">&#8226;</div>
-            <li key={item.id} className="mt-2">{item.name}</li>
+            <div className="mr-2 text-lg text-black">&#8226;</div>
+            <li key={item.id} className="mt-0.5">{item.name}</li>
           </div>
         ))}
       </ul>

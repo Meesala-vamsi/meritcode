@@ -17,7 +17,9 @@ export const templatesList = [
   "nurture",
   "eternal",
   "innovate",
+  "intuify",
   "pixel",
+  "essence",
   // Vamsi
   "genesis",
   "nexus",
@@ -83,6 +85,10 @@ export const layoutsList = {
     ["profiles","skills","education", "certifications", "awards", "publications", "interests", "languages"]]],
     "pixel": [[["summary", "education", "experience", "projects", "volunteer", "references"],
     ["skills", "certifications", "awards", "profiles", "publications", "interests", "languages"]]],
+    "essence": [[["summary", "experience", "education", "projects", "volunteer", "references"],
+    ["skills", "certifications", "awards", "profiles", "publications", "interests", "languages"]]],
+    "intuify": [[["summary", "experience", "projects", "volunteer", "references"],
+    ["skills", "certifications", "awards", "profiles", "education", "publications", "interests", "languages"]]],
 //vamsi
     "genesis": [[["experience","education", "certifications", "awards", "volunteer", "references"],
     ["summary", "skills", "projects", "profiles",   "interests",   "publications", "languages"]]],
@@ -131,16 +137,15 @@ export const layoutsList = {
     ["profiles",  "skills", "interests",   "publications", "languages", "certifications", "awards"]]],
     "rhyhorn": [[["profiles", "summary", "experience", "education", "projects", "volunteer", "references"],
     ["certifications","skills","interests", "awards", "publications", "languages"]]],
-
 };
 
 export const colorList = {
   //jai
   "orion": "light-grey", "legacy": "black", "palette": "black", "joyful": "black", "ignite": "black", "professional": "black", "classic": "black", "simple": "black", "designer": "black",
   //vivek
-  "majestic": "black", "eternal": "grey", "naruto": "#395796", "nurture": "#302b8f", "elevate": "#ea580c", "innovate":  "#b8afa3", "horizon": "#372f25", 
+  "majestic": "black", "eternal": "grey", "naruto": "#395796", "nurture": "#302b8f", "elevate": "#ea580c", "innovate":  "#b8afa3", "horizon": "#372f25", "pixel": "#000000", "essence": "#098960", "intuify": "#1ca7c9", 
   //vamsi
-  "genesis": "#0284c7", "nexus": "black", "zenith": "#b0baca", "pinnacle": "black", "aurora": "#57534e", "maven": "black", "vintage": "#57534e", "sleek": "black",
+  "genesis": "#0284c7", "nexus": "black", "zenith": "#b0baca", "pinnacle": "black", "aurora": "#57534e", "maven": "black", "vintage": "#57534e", "sleek": "black", "ethereal": "#dddddd", "equinox": "#ffffff", 
   //old
   "azurill": "#ca8a04", "bronzor": "black", "chikorita": "#059669", "developerx": "black", "ditto": "#0891b2", "gengar": "#0891b2", "glalie": "#0891b2", "kakuna": "black", 
   "leafish": "#563737", "nosepass": "black", "onyx": "black", "pikachu": "#ca8a04", "rhyhorn": "black"

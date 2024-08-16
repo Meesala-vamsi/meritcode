@@ -39,7 +39,8 @@ import { Designer } from "./designer";
 import { Ethereal } from "./ethereal";
 import { Equinox } from "./equinox"
 import { Pixel } from "./pixel"
-
+import { Essence } from "./essence";
+import { Intuify } from "./intuify";
 
 
 export const getTemplate = (template: Template) => {
@@ -122,6 +123,10 @@ export const getTemplate = (template: Template) => {
       return Equinox;
     case "pixel":
       return Pixel
+    case "essence":
+      return Essence
+    case "intuify":
+      return Intuify
     default:
       return Onyx;
   }

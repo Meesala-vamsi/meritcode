@@ -8,8 +8,7 @@
 
     <!-- Title -->
     <title>
-      theResume - Revolutionize Your Job Application with AI-Driven Resume
-      Builder
+      theResume - We make your resume matter
     </title>
 
     <!-- SEO meta tags -->
@@ -26,97 +25,84 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <style>
-      .video-container {
+      #video-container {
+        width: 100%;
+        max-width: 1120px;
+        height: 0;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
         position: relative;
-        background-color: #000;
-        border-radius: 10px;
-        padding: 0px;
-        margin-bottom: 10px;
+        margin: 0 auto;
       }
-  
-      .video-container .thumbnail-image {
-        display: block;
+    
+      #thumbnail-container {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        transition: transform 0.3s ease;
-        border-radius: 20px;
-      }
-  
-      .iframe-element {
-        height: 90%;
-        width: 100%;
-        margin-top: 30px;
-      }
-  
-      .video-play-button-image{
         cursor: pointer;
+        border: 1px solid #6610f2;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
       }
-  
-      .video-container:hover .thumbnail-image {
+
+      #thumbnail-container:hover {
         transform: scale(1.05);
       }
-
-      .video-container div {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 4rem;
-      transition: opacity 0.3s ease;
-    }
-
-    .video-container div {
-      opacity: 1;
-    }
-
-    @media (max-width:768px) {
-      .video-container {
-        width: 340px;
-        height: 200px;
-      }
-
-      .video-container .thumbnail-image {
+    
+      #thumbnail {
         width: 100%;
-        height: 200px;
-        border-radius: 10px;
+        object-fit: cover;
       }
-
-      .iframe-element {
-        height: 100%;
-        width: 90%;
-        margin: 0px;
+    
+      #play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 84px;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
       }
-    }
-
-    @media (min-width:768px){
-      .video-container{
-        width: 699px;
-        height: 450px;
-      }
-
-      .video-container .thumbnail-image {
+    
+      #youtube-player {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        border-radius: 10px;
+        display: none;
       }
-    }
-
-    @media (min-width:1400px){
-      .video-container{
-        height: 550px;
-        width: 1100px;
+    
+      /* Responsive adjustments */
+      @media (max-width: 1200px) {
+        #video-container {
+          max-width: 900px;
+        }
+        #play-button {
+          font-size: 72px;
+        }
       }
-
-      .video-container .thumbnail-image {
-        width: 100%;
-        border-radius: 10px;
+    
+      @media (max-width: 900px) {
+        #video-container {
+          max-width: 600px;
+        }
+        #play-button {
+          font-size: 60px;
+        }
       }
-    }
-  </style>
+    
+      @media (max-width: 600px) {
+        #video-container {
+          max-width: 90%;
+        }
+        #play-button {
+          font-size: 48px;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -186,6 +172,10 @@
         <section
           class="hero-section style-1 overflow-hidden gradient-bg pt-30 pb-15 pb-lg-20 pt-xl-36"
         >
+        <!-- <div class="background-element"></div> -->
+        <!-- <section
+          class="hero-section style-1 overflow-hidden pt-30 pb-15 pb-lg-20 pt-xl-36"
+        > -->
           <div class="container">
             <div class="row justify-center">
               <div class="col-lg-9">
@@ -218,46 +208,24 @@
                       >Start Creating - It's Free</a
                     >
                   </div>
-                  <div data-aos="fade-up-sm" data-aos-delay="300" class="d-flex justify-center">
-                    <div class="image-with-shape">
-                      <img
-                        src="assets/images/shapes/blurry-shape-1.svg"
-                        alt=""
-                        class="shape animate-scale"
-                      />
-                      <div id="video-container" class="relative mx-auto mt-10 video-container">
-                        <img id="thumbnail" src="assets/images/thumbnails/homepage.png"
-                          alt="Video Thumbnail" class="thumbnail-image border border-primary">
-                        <div>
-                          <img src="assets/images/play-button-svgrepo-com.svg" onclick="playVideo()" alt="play-button"
-                            class="h-12 w-12 video-play-button-image">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <ul
-                    class="d-flex flex-wrap gap-4 gap-md-8 gap-lg-10 align-center justify-center mt-8 mb-0"
-                  >
-                    <li>Craft Resumes 10X Faster</li>
-                    <li>Land Your Dream Job</li>
-                    <li>Engage Recruiters Instantly</li>
-                  </ul>
-                  <!-- <div
-                    class="d-flex gap-8 align-center justify-center mt-12 review-badges"
-                  >
-                    <img
-                      class="img-fluid"
-                      src="assets/images/review-logos/trustpilot_reviews_2.svg"
-                      alt=""
-                    />
-                    <img
-                      class="img-fluid"
-                      src="assets/images/review-logos/capterra_reviews_2.svg"
-                      alt=""
-                    />
-                  </div> -->
                 </div>
               </div>
+
+              <div id="video-container" class="mt-8">
+                <div id="thumbnail-container">
+                  <img id="thumbnail" src="/assets/images/thumbnails/homepage.png" alt="Video Thumbnail">
+                  <div id="play-button">▶</div>
+                </div>
+                <div id="youtube-player"></div>
+              </div>
+
+              <ul
+                class="d-flex flex-wrap gap-4 gap-md-8 gap-lg-10 align-center justify-center mt-4 mb-0"
+              >
+                <li>Craft Resumes 10X Faster</li>
+                <li>Land Your Dream Job</li>
+                <li>Engage Recruiters Instantly</li>
+              </ul>
             </div>
           </div>
         </section>
@@ -495,8 +463,8 @@
                   />
                 </div> -->
                 <div class="feature-img">
-                  <video width="640" height="420" autoplay muted loop>
-                    <source src="assets/videos/VID-20240619-WA0041.mov" type="video/mp4">
+                  <video width="640" height="420" autoplay muted loop class="video-sections">
+                    <source src="assets/videos/VID-001.mov" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
                 </div>
@@ -549,8 +517,8 @@
                   />
                 </div> -->
                 <div class="feature-img">
-                  <video width="640" height="420" autoplay muted loop>
-                    <source src="assets/videos/VID-20240619-WA0040.mp4" type="video/mp4">
+                  <video width="640" height="420" autoplay muted loop class="video-sections">
+                    <source src="assets/videos/VID-002.mov" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
                 </div>
@@ -1860,16 +1828,125 @@
       </footer>
     </div>
 
+    <div id="theresume-cookie-consent" style="display: none; position: fixed; left: 0; bottom: 0; width: 100%; background-color: #f3f4f6; box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1); z-index: 9999; font-family: Arial, sans-serif;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 1rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div style="flex: 1 1 100%; margin-bottom: 1rem;">
+          <p style="margin: 0; font-size: 0.875rem; color: #4b5563;">
+            We use cookies to enhance your browsing experience and analyze our traffic. Please choose your preferences below.
+          </p>
+        </div>
+        <div style="display: flex; gap: 0.5rem;">
+          <button onclick="theResumeAcceptAllCookies()" style="background-color: #3b82f6; color: white; font-weight: bold; padding: 0.5rem 1rem; border: none; border-radius: 0.25rem; cursor: pointer; transition: background-color 0.3s;">
+            Accept
+          </button>
+          <button onclick="theResumeSaveCookiePreferences()" style="background-color: #e5e7eb; color: #1f2937; font-weight: bold; padding: 0.5rem 1rem; border: none; border-radius: 0.25rem; cursor: pointer; transition: background-color 0.3s;">
+            Decline
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
+
     <!-- JS -->
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script>
-      function playVideo() {
-        const container = document.getElementById('video-container');
-        container.innerHTML = `
-              <iframe class="iframe-element" src="https://www.youtube.com/embed/WskxZD9_PLQ?autoplay=1&controls=0&start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              `;
+      var player;
+      var videoId = 'WskxZD9_PLQ';
+
+      function onYouTubeIframeAPIReady() {
+        document.getElementById('thumbnail-container').addEventListener('click', loadVideo);
       }
+
+      function loadVideo() {
+        document.getElementById('thumbnail-container').style.display = 'none';
+        document.getElementById('youtube-player').style.display = 'block';
+
+        var container = document.getElementById('video-container');
+        var width = container.clientWidth;
+        var height = container.clientHeight;
+
+        player = new YT.Player('youtube-player', {
+          height: height,
+          width: width,
+          videoId: videoId,
+          playerVars: {
+            'autoplay': 1,
+            'controls': 1,
+            'rel': 0,
+            'modestbranding': 1,
+            'vq': 'hd1080'
+          },
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.ENDED) {
+          player.stopVideo();
+        }
+      }
+
+      // Adjust video size on window resize
+      window.addEventListener('resize', function() {
+        if (player) {
+          var container = document.getElementById('video-container');
+          var width = container.clientWidth;
+          var height = container.clientHeight;
+          player.setSize(width, height);
+        }
+      });
+    </script>
+    <script>
+      function theResumeSetCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+          expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+      }
+    
+      function theResumeGetCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+      }
+    
+      function theResumeAcceptAllCookies() {
+        theResumeSetCookie('theresumeCookieConsent', 'all', 365);
+        theResumeHideCookieConsent();
+      }
+    
+      function theResumeSaveCookiePreferences() {
+        theResumeSetCookie('theresumeCookieConsent', 'minimal', 365);
+        theResumeHideCookieConsent();
+      }
+    
+      function theResumeHideCookieConsent() {
+        document.getElementById('theresume-cookie-consent').style.display = 'none';
+      }
+    
+      window.addEventListener('load', function() {
+        if (!theResumeGetCookie('theresumeCookieConsent')) {
+          document.getElementById('theresume-cookie-consent').style.display = 'block';
+        }
+      });
     </script>
   </body>
 </html>

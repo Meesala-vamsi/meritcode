@@ -172,11 +172,9 @@ const Section = <T,>({
     alignChanges = "grid gap-x-6 gap-y-3";
   }
 
-  let spacing;
+  let spacing = "space-y-2";
   if(section.id === 'awards'){
     spacing = "space-y-0";
-  }else{
-    spacing = "space-y-2";
   }
 
   return (

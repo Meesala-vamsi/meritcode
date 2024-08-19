@@ -2,8 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "apps/server/src/main.ts",
-      "use": "@vercel/node"
+      "src": "apps/server/project.json",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "apps/server/src/main.ts",
+          "tools/prisma/**/*"
+        ]
+      }
     }
   ],
   "routes": [

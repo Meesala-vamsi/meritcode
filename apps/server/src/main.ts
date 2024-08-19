@@ -25,7 +25,7 @@ async function bootstrap() {
   // Error Reporting and Performance Monitoring
   const sentryDsn = configService.get("VITE_SENTRY_DSN");
 
-  // if (sentryDsn) {
+  if (sentryDsn) {
     const express = app.getHttpAdapter().getInstance();
 
     Sentry.init({
@@ -39,7 +39,7 @@ async function bootstrap() {
         ...Sentry.autoDiscoverNodePerformanceMonitoringIntegrations(),
       ],
     });
-  // }
+  }
 
   // Cookie Parser
   app.use(cookieParser());

@@ -8,10 +8,11 @@ import { queryClient } from "@/client/libs/query-client";
 import { useAuthStore } from "@/client/stores/auth";
 
 export const login = async (data: LoginDto) => {
-  const response = await axios.post<AuthResponseDto, AxiosResponse<AuthResponseDto>, LoginDto>(
-    "/auth/login",
-    data,
-  );
+ const response = await axios.post<AuthResponseDto, AxiosResponse<AuthResponseDto>, LoginDto>(
+  "/auth/login",
+  data
+);
+
 
   return response.data;
 };

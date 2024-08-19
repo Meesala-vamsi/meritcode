@@ -9,7 +9,7 @@ import { useAuthStore } from "@/client/stores/auth";
 
 export const login = async (data: LoginDto) => {
  const response = await axios.post<AuthResponseDto, AxiosResponse<AuthResponseDto>, LoginDto>(
-  "https://meritcode.vercel.app/auth/login",
+  "/auth/login",
   data
 );
 

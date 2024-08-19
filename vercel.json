@@ -1,13 +1,13 @@
 {"builds": [
     {
-      "src": "apps/client/package.json",
+      "src": "apps/client/project.json",
       "use": "@vercel/next",
       "config": {
         "distDir": "apps/client/.next"
       }
     },
     {
-      "src": "apps/artboard/package.json",
+      "src": "apps/artboard/project.json",
       "use": "@vercel/next",
       "config": {
         "distDir": "apps/artboard/.next"

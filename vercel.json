@@ -1,35 +1,15 @@
-{"builds": [
+{
+  "version": 2,
+  "builds": [
     {
-      "src": "apps/client/project.json",
-      "use": "@vercel/next",
-      "config": {
-        "distDir": "apps/client/.next"
-      }
-    },
-    {
-      "src": "apps/artboard/project.json",
-      "use": "@vercel/next",
-      "config": {
-        "distDir": "apps/artboard/.next"
-      }
-    },
-    {
-      "src": "staticHtml/*/",
-      "use": "@vercel/static"
+      "src": "dist/apps/server/main.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/client/(.*)",
-      "dest": "/apps/client/$1"
-    },
-    {
-      "src": "/artboard/(.*)",
-      "dest": "/apps/artboard/$1"
-    },
-    {
-      "src": "/staticHtml/(.*)",
-      "dest": "/staticHtml/$1"
+      "src": "/(.*)",
+      "dest": "dist/apps/server/main.js"
     }
   ]
 }

@@ -7,6 +7,7 @@ declare global {
       payload?: {
         resume: Resume;
       };
+      cookies?: Record<string, any>; 
     }
   }
 }

@@ -7,14 +7,15 @@
       "config": {
         "includeFiles": [
           "tools/prisma/**/*"
-        ]
+        ],
+        "buildCommand": "pnpm prebuild && pnpm build"
       }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/dist/apps/server/main.js"
+      "dest": "dist/apps/server/main.js"
     }
   ]
 }

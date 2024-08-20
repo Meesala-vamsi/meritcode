@@ -8,8 +8,7 @@
         "includeFiles": [
           "tools/prisma/schema.prisma",
           "tools/prisma/migrations/**/*"
-        ],
-        "buildCommand": "pnpm prebuild && pnpm build"
+        ]
       }
     }
   ],

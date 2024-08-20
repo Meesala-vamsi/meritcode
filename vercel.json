@@ -6,7 +6,8 @@
       "use": "@vercel/node",
       "config": {
         "includeFiles": [
-          "tools/prisma/**/*"
+          "tools/prisma/schema.prisma",
+          "tools/prisma/migrations/**/*"
         ],
         "buildCommand": "pnpm prebuild && pnpm build"
       }

@@ -1,0 +1,1003 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+function _export(target, all) {
+    for(var name in all)Object.defineProperty(target, name, {
+        enumerable: true,
+        get: all[name]
+    });
+}
+_export(exports, {
+    colorList: function() {
+        return colorList;
+    },
+    layoutsList: function() {
+        return layoutsList;
+    },
+    templatesList: function() {
+        return templatesList;
+    }
+});
+const templatesList = [
+    // Jai
+    "orion",
+    "legacy",
+    "palette",
+    "ignite",
+    "joyful",
+    "professional",
+    "classic",
+    "simple",
+    "designer",
+    // Vivek
+    "majestic",
+    "horizon",
+    "elevate",
+    "naruto",
+    "nurture",
+    "eternal",
+    "innovate",
+    "intuify",
+    "pixel",
+    "essence",
+    // Vamsi
+    "genesis",
+    "nexus",
+    "zenith",
+    "pinnacle",
+    "aurora",
+    "maven",
+    "vintage",
+    "sleek",
+    "ethereal",
+    "equinox",
+    // Old
+    "azurill",
+    "bronzor",
+    "chikorita",
+    "developerx",
+    "ditto",
+    "gengar",
+    "glalie",
+    "kakuna",
+    "leafish",
+    "nosepass",
+    "onyx",
+    "pikachu",
+    "rhyhorn"
+];
+const layoutsList = {
+    //jai
+    "orion": [
+        [
+            [
+                "summary",
+                "skills",
+                "experience",
+                "education",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "certifications",
+                "awards",
+                "interests",
+                "publications",
+                "languages",
+                "profiles"
+            ]
+        ]
+    ],
+    "legacy": [
+        [
+            [
+                "summary",
+                "skills",
+                "education",
+                "experience",
+                "projects",
+                "profiles",
+                "volunteer",
+                "references"
+            ],
+            [
+                "certifications",
+                "awards",
+                "publications",
+                "interests",
+                "languages"
+            ]
+        ]
+    ],
+    "palette": [
+        [
+            [
+                "experience",
+                "education",
+                "projects",
+                "certifications",
+                "awards",
+                "volunteer",
+                "references"
+            ],
+            [
+                "summary",
+                "skills",
+                "profiles",
+                "interests",
+                "publications",
+                "languages"
+            ]
+        ]
+    ],
+    "ignite": [
+        [
+            [
+                "experience",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "education",
+                "skills",
+                "certifications",
+                "profiles",
+                "interests",
+                "awards",
+                "publications",
+                "languages"
+            ]
+        ]
+    ],
+    "joyful": [
+        [
+            [
+                "experience",
+                "education",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "summary",
+                "skills",
+                "interests",
+                "certifications",
+                "awards",
+                "publications",
+                "languages",
+                "profiles"
+            ]
+        ]
+    ],
+    "professional": [
+        [
+            [
+                "summary",
+                "experience",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "education",
+                "skills",
+                "certifications",
+                "awards",
+                "profiles",
+                "publications",
+                "interests",
+                "languages"
+            ]
+        ]
+    ],
+    "classic": [
+        [
+            [
+                "summary",
+                "skills",
+                "experience",
+                "education",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "profiles",
+                "interests",
+                "publications",
+                "languages",
+                "certifications",
+                "awards"
+            ]
+        ]
+    ],
+    "simple": [
+        [
+            [
+                "summary",
+                "experience",
+                "projects",
+                "skills",
+                "volunteer",
+                "references"
+            ],
+            [
+                "education",
+                "certifications",
+                "awards",
+                "profiles",
+                "interests",
+                "publications",
+                "languages"
+            ]
+        ]
+    ],
+    "designer": [
+        [
+            [
+                "summary",
+                "experience",
+                "education",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "profiles",
+                "skills",
+                "interests",
+                "certifications",
+                "awards",
+                "publications",
+                "languages"
+            ]
+        ]
+    ],
+    //vivek
+    "majestic": [
+        [
+            [
+                "summary",
+                "experience",
+                "education",
+                "projects",
+                "certifications",
+                "awards",
+                "volunteer",
+                "references"
+            ],
+            [
+                "skills",
+                "profiles",
+                "interests",
+                "publications",
+                "languages"
+            ]
+        ]
+    ],
+    "horizon": [
+        [
+            [
+                "experience",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "profiles",
+                "skills",
+                "certifications",
+                "education",
+                "interests",
+                "awards",
+                "publications",
+                "languages"
+            ]
+        ]
+    ],
+    "elevate": [
+        [
+            [
+                "summary",
+                "experience",
+                "education",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "profiles",
+                "skills",
+                "interests",
+                "certifications",
+                "awards",
+                "publications",
+                "languages"
+            ]
+        ]
+    ],
+    "naruto": [
+        [
+            [
+                "summary",
+                "experience",
+                "education",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "skills",
+                "certifications",
+                "awards",
+                "profiles",
+                "publications",
+                "interests",
+                "languages"
+            ]
+        ]
+    ],
+    "nurture": [
+        [
+            [
+                "summary",
+                "experience",
+                "education",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "profiles",
+                "skills",
+                "interests",
+                "publications",
+                "languages",
+                "certifications",
+                "awards"
+            ]
+        ]
+    ],
+    "eternal": [
+        [
+            [
+                "summary",
+                "skills",
+                "projects",
+                "experience",
+                "education",
+                "volunteer",
+                "references"
+            ],
+            [
+                "profiles",
+                "interests",
+                "certifications",
+                "awards",
+                "publications",
+                "languages"
+            ]
+        ]
+    ],
+    "innovate": [
+        [
+            [
+                "summary",
+                "experience",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "profiles",
+                "skills",
+                "education",
+                "certifications",
+                "awards",
+                "publications",
+                "interests",
+                "languages"
+            ]
+        ]
+    ],
+    "pixel": [
+        [
+            [
+                "summary",
+                "education",
+                "experience",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "skills",
+                "certifications",
+                "awards",
+                "profiles",
+                "publications",
+                "interests",
+                "languages"
+            ]
+        ]
+    ],
+    "essence": [
+        [
+            [
+                "summary",
+                "experience",
+                "education",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "skills",
+                "certifications",
+                "awards",
+                "profiles",
+                "publications",
+                "interests",
+                "languages"
+            ]
+        ]
+    ],
+    "intuify": [
+        [
+            [
+                "summary",
+                "experience",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "skills",
+                "certifications",
+                "awards",
+                "profiles",
+                "education",
+                "publications",
+                "interests",
+                "languages"
+            ]
+        ]
+    ],
+    //vamsi
+    "genesis": [
+        [
+            [
+                "experience",
+                "education",
+                "certifications",
+                "awards",
+                "volunteer",
+                "references"
+            ],
+            [
+                "summary",
+                "skills",
+                "projects",
+                "profiles",
+                "interests",
+                "publications",
+                "languages"
+            ]
+        ]
+    ],
+    "nexus": [
+        [
+            [
+                "experience",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "profiles",
+                "skills",
+                "certifications",
+                "education",
+                "interests",
+                "awards",
+                "publications",
+                "languages"
+            ]
+        ]
+    ],
+    "zenith": [
+        [
+            [
+                "summary",
+                "experience",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "skills",
+                "interests",
+                "certifications",
+                "awards",
+                "publications",
+                "languages",
+                "profiles",
+                "education"
+            ]
+        ]
+    ],
+    "pinnacle": [
+        [
+            [
+                "summary",
+                "experience",
+                "education",
+                "certifications",
+                "awards",
+                "volunteer",
+                "references"
+            ],
+            [
+                "skills",
+                "profiles",
+                "projects",
+                "publications",
+                "interests",
+                "languages"
+            ]
+        ]
+    ],
+    "aurora": [
+        [
+            [
+                "summary",
+                "experience",
+                "education",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "certifications",
+                "awards",
+                "skills",
+                "profiles",
+                "interests",
+                "publications",
+                "languages"
+            ]
+        ]
+    ],
+    "maven": [
+        [
+            [
+                "summary",
+                "education",
+                "interests",
+                "experience",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "profiles",
+                "skills",
+                "certifications",
+                "awards",
+                "publications",
+                "languages"
+            ]
+        ]
+    ],
+    "vintage": [
+        [
+            [
+                "summary",
+                "experience",
+                "education",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "profiles",
+                "skills",
+                "interests",
+                "certifications",
+                "awards",
+                "publications",
+                "languages"
+            ]
+        ]
+    ],
+    "sleek": [
+        [
+            [
+                "summary",
+                "experience",
+                "education",
+                "volunteer",
+                "references"
+            ],
+            [
+                "profiles",
+                "skills",
+                "interests",
+                "certifications",
+                "projects",
+                "awards",
+                "publications",
+                "languages"
+            ]
+        ]
+    ],
+    "ethereal": [
+        [
+            [
+                "summary",
+                "experience",
+                "projects",
+                "awards",
+                "volunteer",
+                "references"
+            ],
+            [
+                "profiles",
+                "education",
+                "skills",
+                "interests",
+                "certifications",
+                "publications",
+                "languages"
+            ]
+        ]
+    ],
+    "equinox": [
+        [
+            [
+                "summary",
+                "experience",
+                "projects",
+                "awards",
+                "volunteer",
+                "references"
+            ],
+            [
+                "profiles",
+                "education",
+                "skills",
+                "interests",
+                "certifications",
+                "publications",
+                "languages"
+            ]
+        ]
+    ],
+    //previous
+    "azurill": [
+        [
+            [
+                "summary",
+                "experience",
+                "education",
+                "awards",
+                "volunteer",
+                "references"
+            ],
+            [
+                "profiles",
+                "skills",
+                "interests",
+                "certifications",
+                "projects",
+                "publications",
+                "languages"
+            ]
+        ]
+    ],
+    "bronzor": [
+        [
+            [
+                "profiles",
+                "summary",
+                "experience",
+                "education",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "skills",
+                "certifications",
+                "interests",
+                "awards",
+                "publications",
+                "languages"
+            ]
+        ]
+    ],
+    "chikorita": [
+        [
+            [
+                "summary",
+                "experience",
+                "education",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "skills",
+                "interests",
+                "certifications",
+                "awards",
+                "publications",
+                "languages",
+                "profiles"
+            ]
+        ]
+    ],
+    "developerx": [
+        [
+            [
+                "summary",
+                "experience",
+                "education",
+                "projects",
+                "certifications",
+                "awards",
+                "volunteer",
+                "references"
+            ],
+            [
+                "skills",
+                "profiles",
+                "publications",
+                "interests",
+                "languages"
+            ]
+        ]
+    ],
+    "ditto": [
+        [
+            [
+                "summary",
+                "experience",
+                "education",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "profiles",
+                "skills",
+                "interests",
+                "publications",
+                "languages",
+                "certifications",
+                "awards"
+            ]
+        ]
+    ],
+    "gengar": [
+        [
+            [
+                "summary",
+                "experience",
+                "education",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "profiles",
+                "skills",
+                "interests",
+                "certifications",
+                "awards",
+                "publications",
+                "languages"
+            ]
+        ]
+    ],
+    "glalie": [
+        [
+            [
+                "summary",
+                "experience",
+                "education",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "profiles",
+                "skills",
+                "interests",
+                "certifications",
+                "awards",
+                "publications",
+                "languages"
+            ]
+        ]
+    ],
+    "kakuna": [
+        [
+            [
+                "summary",
+                "experience",
+                "education",
+                "projects",
+                "certifications",
+                "awards",
+                "volunteer",
+                "references"
+            ],
+            [
+                "skills",
+                "profiles",
+                "interests",
+                "publications",
+                "languages"
+            ]
+        ]
+    ],
+    "leafish": [
+        [
+            [
+                "experience",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "profiles",
+                "skills",
+                "certifications",
+                "education",
+                "interests",
+                "awards",
+                "publications",
+                "languages"
+            ]
+        ]
+    ],
+    "nosepass": [
+        [
+            [
+                "summary",
+                "experience",
+                "education",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "skills",
+                "interests",
+                "certifications",
+                "awards",
+                "publications",
+                "languages",
+                "profiles"
+            ]
+        ]
+    ],
+    "onyx": [
+        [
+            [
+                "summary",
+                "experience",
+                "education",
+                "projects",
+                "certifications",
+                "awards",
+                "volunteer",
+                "references"
+            ],
+            [
+                "skills",
+                "profiles",
+                "publications",
+                "interests",
+                "languages"
+            ]
+        ]
+    ],
+    "pikachu": [
+        [
+            [
+                "summary",
+                "experience",
+                "education",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "profiles",
+                "skills",
+                "interests",
+                "publications",
+                "languages",
+                "certifications",
+                "awards"
+            ]
+        ]
+    ],
+    "rhyhorn": [
+        [
+            [
+                "profiles",
+                "summary",
+                "experience",
+                "education",
+                "projects",
+                "volunteer",
+                "references"
+            ],
+            [
+                "certifications",
+                "skills",
+                "interests",
+                "awards",
+                "publications",
+                "languages"
+            ]
+        ]
+    ]
+};
+const colorList = {
+    //jai
+    "orion": "light-grey",
+    "legacy": "black",
+    "palette": "black",
+    "joyful": "black",
+    "ignite": "black",
+    "professional": "black",
+    "classic": "black",
+    "simple": "black",
+    "designer": "black",
+    //vivek
+    "majestic": "black",
+    "eternal": "grey",
+    "naruto": "#395796",
+    "nurture": "#302b8f",
+    "elevate": "#ea580c",
+    "innovate": "#b8afa3",
+    "horizon": "#372f25",
+    "pixel": "#000000",
+    "essence": "#098960",
+    "intuify": "#1ca7c9",
+    //vamsi
+    "genesis": "#0284c7",
+    "nexus": "black",
+    "zenith": "#b0baca",
+    "pinnacle": "black",
+    "aurora": "#57534e",
+    "maven": "black",
+    "vintage": "#57534e",
+    "sleek": "black",
+    "ethereal": "#dddddd",
+    "equinox": "#ffffff",
+    //old
+    "azurill": "#ca8a04",
+    "bronzor": "black",
+    "chikorita": "#059669",
+    "developerx": "black",
+    "ditto": "#0891b2",
+    "gengar": "#0891b2",
+    "glalie": "#0891b2",
+    "kakuna": "black",
+    "leafish": "#563737",
+    "nosepass": "black",
+    "onyx": "black",
+    "pikachu": "#ca8a04",
+    "rhyhorn": "black"
+};
+
+//# sourceMappingURL=template.js.map

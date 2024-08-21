@@ -1,0 +1,44 @@
+import { z } from "zod";
+export declare const profileSchema: z.ZodObject<{
+    "First Name": z.ZodString;
+    "Last Name": z.ZodString;
+    "Maiden Name": z.ZodOptional<z.ZodString>;
+    Address: z.ZodString;
+    "Birth Date": z.ZodString;
+    Headline: z.ZodString;
+    Summary: z.ZodString;
+    Industry: z.ZodString;
+    "Zip Code": z.ZodOptional<z.ZodString>;
+    "Geo Location": z.ZodString;
+    "Twitter Handles": z.ZodString;
+    Websites: z.ZodString;
+    "Instant Messengers": z.ZodOptional<z.ZodString>;
+}, "strip", z.ZodTypeAny, {
+    "First Name": string;
+    "Last Name": string;
+    Address: string;
+    "Birth Date": string;
+    Headline: string;
+    Summary: string;
+    Industry: string;
+    "Geo Location": string;
+    "Twitter Handles": string;
+    Websites: string;
+    "Maiden Name"?: string | undefined;
+    "Zip Code"?: string | undefined;
+    "Instant Messengers"?: string | undefined;
+}, {
+    "First Name": string;
+    "Last Name": string;
+    Address: string;
+    "Birth Date": string;
+    Headline: string;
+    Summary: string;
+    Industry: string;
+    "Geo Location": string;
+    "Twitter Handles": string;
+    Websites: string;
+    "Maiden Name"?: string | undefined;
+    "Zip Code"?: string | undefined;
+    "Instant Messengers"?: string | undefined;
+}>;

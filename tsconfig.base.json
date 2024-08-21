@@ -26,5 +26,5 @@
       "@reactive-resume/utils": ["libs/utils/src/index.ts"]
     }
   },
-  "exclude": ["node_modules", "dist", "tmp", ".nx"]
+  "exclude": ["node_modules", "tmp", ".nx"]
 }
